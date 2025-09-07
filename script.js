@@ -34,20 +34,38 @@ document.querySelectorAll('.faq-question').forEach(question => {
     });
 });
 
-// RSVP form handling
-document.querySelector('.rsvp-form').addEventListener('submit', function(e) {
-    e.preventDefault();
+// Dynamic form handling based on attendance selection
+document.getElementById('attendance').addEventListener('change', function() {
+    const attendanceValue = this.value;
+    const partnerField = document.querySelector('.partner-field');
+    const attendingFields = document.querySelectorAll('.attending-fields');
+    const partnerInput = document.getElementById('partner-name');
     
-    const formData = new FormData(this);
-    const data = {};
+    // Hide all fields first
+    partnerField.style.display = 'none';
+    attendingFields.forEach(field => field.style.display = 'none');
     
-    for (let [key, value] of formData.entries()) {
-        data[key] = value;
+    // Clear required attributes
+    partnerInput.required = false;
+    
+    // Show appropriate fields based on selection
+    if (attendanceValue === '1-person') {
+        attendingFields.forEach(field => field.style.display = 'block');
+    } else if (attendanceValue === '2-people') {
+        partnerField.style.display = 'block';
+        partnerInput.required = true;
+        attendingFields.forEach(field => field.style.display = 'block');
     }
-    
-    // Here you would typically send the data to a server
-    // For now, we'll just show a confirmation message
-    showConfirmationMessage();
+    // If 'not-attending', only basic message field remains visible
+});
+
+// RSVP form handling - updated for Netlify
+document.querySelector('.rsvp-form').addEventListener('submit', function(e) {
+    // Don't prevent default - let Netlify handle the submission
+    // Just show a quick confirmation
+    setTimeout(function() {
+        showConfirmationMessage();
+    }, 100);
 });
 
 function showConfirmationMessage() {

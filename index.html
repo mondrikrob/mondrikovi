@@ -138,41 +138,70 @@
         <section id="rsvp" class="rsvp">
             <div class="container">
                 <h2>Potvrzení účasti</h2>
-                <p>Prosíme o potvrzení vaší účasti do [datum]</p>
                 <form class="rsvp-form" netlify>
+                    <!-- Name -->
                     <div class="form-group">
                         <label for="name">Jméno a příjmení</label>
                         <input type="text" id="name" name="name" required>
                     </div>
+
+                    <!-- Email Contact -->
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" required>
                     </div>
+                    
+                    <!-- Attendance Selection -->
                     <div class="form-group">
-                        <label for="guests">Počet hostů</label>
-                        <select id="guests" name="guests" required>
-                            <option value="">Vyberte počet</option>
-                            <option value="1">1 osoba</option>
-                            <option value="2">2 osoby</option>
-                            <option value="3">3 osoby</option>
-                            <option value="4">4 osoby</option>
+                        <label for="attendance">Účast</label>
+                        <select id="attendance" name="attendance" required>
+                            <option value="">Vyberte možnost</option>
+                            <option value="1-person">Přijdu sám/sama</option>
+                            <option value="2-people">Přijedeme ve dvou</option>
+                            <option value="not-attending">Bohužel nemůžeme</option>
                         </select>
                     </div>
-                    <div class="form-group">
-                        <label for="attending">Účast</label>
-                        <div class="radio-group">
-                            <label><input type="radio" name="attending" value="yes" required> Ano, zúčastníme se</label>
-                            <label><input type="radio" name="attending" value="no" required> Ne, bohužel nemůžeme</label>
-                        </div>
+
+                    <!-- Partner Name Field -->
+                    <div class="form-group partner-field" style="display: none;">
+                        <label for="partner-name">Jméno partnera/partnerky</label>
+                        <input type="text" id="partner-name" name="partner-name">
                     </div>
-                    <div class="form-group">
+
+                    <!-- Children Question -->
+                    <div class="form-group attending-fields" style="display: none;">
+                        <label for="children">Děti</label>
+                        <textarea id="children" name="children" rows="2" placeholder="Napište počet a věk dětí (např. '2 děti - 5 a 8 let') nebo 'žádné děti'"></textarea>
+                    </div>
+
+                    <!-- Accommodation/Transport -->
+                    <div class="form-group attending-fields" style="display: none;">
+                        <label for="accommodation">Ubytování/Odvoz</label>
+                        <select id="accommodation" name="accommodation">
+                            <option value="">Vyberte možnost</option>
+                            <option value="need-help">Chceme zajistit ubytování</option>
+                            <option value="own-solution">Ubytujeme se/odjedeme po vlastní ose</option>
+                        </select>
+                    </div>
+
+                    <!-- Dietary Restrictions -->
+                    <div class="form-group attending-fields" style="display: none;">
                         <label for="dietary">Dietní omezení nebo alergie</label>
-                        <textarea id="dietary" name="dietary" rows="3"></textarea>
+                        <textarea id="dietary" name="dietary" rows="3" placeholder="Napište případná dietní omezení, alergie, vegetariánství..."></textarea>
                     </div>
+
+                    <!-- Favorite Song -->
+                    <div class="form-group attending-fields" style="display: none;">
+                        <label for="song">Písňový požadavek</label>
+                        <input type="text" id="song" name="song" placeholder="Píseň, kterou byste rádi slyšeli na svatbě">
+                    </div>
+
+                    <!-- Message -->
                     <div class="form-group">
                         <label for="message">Vzkaz pro novomanžele</label>
-                        <textarea id="message" name="message" rows="4"></textarea>
+                        <textarea id="message" name="message" rows="4" placeholder="Vaše přání, vzpomínky nebo cokoliv nám chcete vzkázat..."></textarea>
                     </div>
+
                     <button type="submit" class="submit-btn">Odeslat potvrzení</button>
                 </form>
             </div>
