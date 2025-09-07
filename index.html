@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naše svatba | Michaela & Robert</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Domů</a></li>
+                <li><a href="#story">Náš příběh</a></li>
+                <li><a href="#details">Detaily</a></li>
+                <li><a href="#gallery">Galerie</a></li>
+                <li><a href="#rsvp">Potvrzení účasti</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Michaela & Robert</h1>
+                <p class="hero-subtitle">Připojte se k nám při oslavě naší lásky</p>
+                <div class="hero-date">6. června 2026</div>
+                <div class="hero-location">Kulturní Dům Svatobořice-Mistřín</div>
+            </div>
+            <div class="hero-image">
+                <img src="img/hero-photo.jpg" alt="Svatební pár" class="placeholder-image">
+            </div>
+        </section>
+
+        <!-- Story Section -->
+        <section id="story" class="story">
+            <div class="container">
+                <h2>Náš příběh</h2>
+                <div class="story-content">
+                    <div class="story-text">
+                        <p>Zde bude váš příběh lásky. Můžete popsat, jak jste se poznali, první rande, zásnuby a cestu k tomuto velkému dni.</p>
+                        <p>Tento text můžete upravit podle svých představ a přidat osobní detaily, které udělají váš příběh jedinečným.</p>
+                    </div>
+                    <div class="story-image">
+                        <img src="img/story-photo.jpg" alt="Zásnubní foto" class="placeholder-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wedding Details -->
+        <section id="details" class="details">
+            <div class="container">
+                <h2>Detaily svatby</h2>
+                <div class="details-grid">
+                    <div class="detail-card">
+                        <h3>Obřad</h3>
+                        <p><strong>Datum:</strong> [Datum]</p>
+                        <p><strong>Čas:</strong> [Čas]</p>
+                        <p><strong>Místo:</strong> [Místo obřadu]</p>
+                        <p><strong>Adresa:</strong> [Adresa]</p>
+                    </div>
+                    <div class="detail-card">
+                        <h3>Oslava</h3>
+                        <p><strong>Datum:</strong> [Datum]</p>
+                        <p><strong>Čas:</strong> [Čas]</p>
+                        <p><strong>Místo:</strong> [Místo oslavy]</p>
+                        <p><strong>Adresa:</strong> [Adresa]</p>
+                    </div>
+                    <div class="detail-card">
+                        <h3>Dress code</h3>
+                        <p>[Popis dress code - např. elegantní, boho chic, nebo konkrétní barvy]</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline -->
+        <section class="timeline">
+            <div class="container">
+                <h2>Program dne</h2>
+                <div class="timeline-items">
+                    <div class="timeline-item">
+                        <div class="time">[Čas]</div>
+                        <div class="event">Svatební obřad</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">[Čas]</div>
+                        <div class="event">Fotografování</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">[Čas]</div>
+                        <div class="event">Svatební hostina</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">[Čas]</div>
+                        <div class="event">První tanec</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">[Čas]</div>
+                        <div class="event">Večerní zábava</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section id="gallery" class="gallery">
+            <div class="container">
+                <h2>Galerie</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="img/gallery-1.jpg" alt="Foto 1" class="placeholder-image">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/gallery-2.jpg" alt="Foto 2" class="placeholder-image">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/gallery-3.jpg" alt="Foto 3" class="placeholder-image">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/gallery-4.jpg" alt="Foto 4" class="placeholder-image">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/gallery-5.jpg" alt="Foto 5" class="placeholder-image">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/gallery-6.jpg" alt="Foto 6" class="placeholder-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RSVP -->
+        <section id="rsvp" class="rsvp">
+            <div class="container">
+                <h2>Potvrzení účasti</h2>
+                <p>Prosíme o potvrzení vaší účasti do [datum]</p>
+                <form class="rsvp-form" netlify>
+                    <div class="form-group">
+                        <label for="name">Jméno a příjmení</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Počet hostů</label>
+                        <select id="guests" name="guests" required>
+                            <option value="">Vyberte počet</option>
+                            <option value="1">1 osoba</option>
+                            <option value="2">2 osoby</option>
+                            <option value="3">3 osoby</option>
+                            <option value="4">4 osoby</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="attending">Účast</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="attending" value="yes" required> Ano, zúčastníme se</label>
+                            <label><input type="radio" name="attending" value="no" required> Ne, bohužel nemůžeme</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="dietary">Dietní omezení nebo alergie</label>
+                        <textarea id="dietary" name="dietary" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Vzkaz pro novomanžele</label>
+                        <textarea id="message" name="message" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Odeslat potvrzení</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="faq">
+            <div class="container">
+                <h2>Často kladené otázky</h2>
+                <div class="faq-items">
+                    <div class="faq-item">
+                        <h3 class="faq-question">Kde se bude svatba konat?</h3>
+                        <div class="faq-answer">
+                            <p>[Odpověď - místo konání a případné další informace]</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">Jaký je dress code?</h3>
+                        <div class="faq-answer">
+                            <p>[Odpověď - popis oblečení]</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">Můžu přivést děti?</h3>
+                        <div class="faq-answer">
+                            <p>[Odpověď - politika ohledně dětí]</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">Kde mohu parkovat?</h3>
+                        <div class="faq-answer">
+                            <p>[Odpověď - informace o parkování]</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">Máte seznam darů?</h3>
+                        <div class="faq-answer">
+                            <p>[Odpověď - informace o darech]</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Michaela & Robert. S láskou vytvořeno pro náš velký den.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
