@@ -40,14 +40,20 @@ document.getElementById('attendance').addEventListener('change', function() {
     const partnerField = document.querySelector('.partner-field');
     const attendingFields = document.querySelectorAll('.attending-fields');
     const partnerInput = document.getElementById('partner-name');
-    
+
     // Hide all fields first
     partnerField.style.display = 'none';
     attendingFields.forEach(field => field.style.display = 'none');
-    
+    document.querySelectorAll('.children-detail').forEach(f => f.style.display = 'none');
+    document.querySelector('.transport-detail').style.display = 'none';
+
+    // Reset child selects
+    document.getElementById('children').value = '';
+    document.getElementById('transport').value = '';
+
     // Clear required attributes
     partnerInput.required = false;
-    
+
     // Show appropriate fields based on selection
     if (attendanceValue === '1-person') {
         attendingFields.forEach(field => field.style.display = 'block');
@@ -57,6 +63,17 @@ document.getElementById('attendance').addEventListener('change', function() {
         attendingFields.forEach(field => field.style.display = 'block');
     }
     // If 'not-attending', only basic message field remains visible
+});
+
+// Show/hide children detail fields
+document.getElementById('children').addEventListener('change', function() {
+    const show = this.value === 'ano';
+    document.querySelectorAll('.children-detail').forEach(f => f.style.display = show ? 'block' : 'none');
+});
+
+// Show/hide transport destination
+document.getElementById('transport').addEventListener('change', function() {
+    document.querySelector('.transport-detail').style.display = this.value === 'ano' ? 'block' : 'none';
 });
 
 // RSVP form handling - updated for Netlify

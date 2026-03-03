@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naše svatba | Michaela & Robert</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+    <meta property="og:title" content="Naše svatba | Michaela & Robert">
+    <meta property="og:description" content="Připojte se k nám při oslavě naší lásky – 6. června 2026, Kulturní dům Svatobořice-Mistřín">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mondrikovi.netlify.app/">
+    <meta property="og:image" content="https://mondrikovi.netlify.app/img/hero-photo.jpg">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
@@ -49,7 +55,7 @@
                     <div class="detail-card">
                         <h3>Oslava</h3>
                         <p><strong>Datum:</strong> 6. června 2026</p>
-                        <p><strong>Čas:</strong> 14:30 (oběd)</p>
+                        <p><strong>Čas:</strong> 14:00 (oběd)</p>
                         <p><strong>Místo:</strong> Kulturní dům Svatobořice-Mistřín</p>
                         <p><strong>Adresa:</strong> <a href="https://www.google.com/maps/search/?api=1&query=Hlavní+1080,+Svatobořice-Mistřín" target="_blank">Hlavní 1080, Svatobořice-Mistřín</a></p>
                     </div>
@@ -80,7 +86,7 @@
                         <div class="event">Fotografování</div>
                     </div>
                     <div class="timeline-item">
-                        <div class="time">14:30</div>
+                        <div class="time">14:00</div>
                         <div class="event">Svatební hostina</div>
                     </div>
                     <div class="timeline-item">
@@ -133,12 +139,6 @@
                         <input type="text" id="name" name="name" required>
                     </div>
 
-                    <!-- Email Contact -->
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    
                     <!-- Attendance Selection -->
                     <div class="form-group">
                         <label for="attendance">Účast</label>
@@ -158,17 +158,34 @@
 
                     <!-- Children Question -->
                     <div class="form-group attending-fields" style="display: none;">
-                        <label for="children">Děti</label>
-                        <textarea id="children" name="children" rows="2" placeholder="Napište počet a věk dětí (např. '2 děti - 5 a 8 let') nebo 'žádné děti'"></textarea>
+                        <label for="children">Přijedete s dětmi?</label>
+                        <select id="children" name="children">
+                            <option value="">Vyberte možnost</option>
+                            <option value="ne">Ne</option>
+                            <option value="ano">Ano</option>
+                        </select>
                     </div>
 
-                    <!-- Accommodation/Transport -->
+                    <!-- Children Count -->
+                    <div class="form-group children-detail" style="display: none;">
+                        <label for="children-count">Počet dětí</label>
+                        <input type="number" id="children-count" name="children-count" min="1" max="10">
+                    </div>
+
+                    <!-- Children Ages -->
+                    <div class="form-group children-detail" style="display: none;">
+                        <label for="children-ages">Věk dětí</label>
+                        <input type="text" id="children-ages" name="children-ages" placeholder="např. 3 a 7 let">
+                    </div>
+
+                    <!-- Accommodation -->
                     <div class="form-group attending-fields" style="display: none;">
-                        <label for="accommodation">Ubytování/Odvoz</label>
+                        <label for="accommodation">Ubytování</label>
                         <select id="accommodation" name="accommodation">
                             <option value="">Vyberte možnost</option>
-                            <option value="need-help">Chceme zajistit ubytování</option>
-                            <option value="own-solution">Ubytujeme se/odjedeme po vlastní ose</option>
+                            <option value="vlastni">Ubytování si zajistíme sami</option>
+                            <option value="zajem">Máme zájem o ubytování</option>
+                            <option value="nepotrebuji">Ubytování nepotřebujeme</option>
                         </select>
                     </div>
 
@@ -176,6 +193,22 @@
                     <div class="form-group attending-fields" style="display: none;">
                         <label for="dietary">Dietní omezení nebo alergie</label>
                         <textarea id="dietary" name="dietary" rows="3" placeholder="Napište případná dietní omezení, alergie, vegetariánství..."></textarea>
+                    </div>
+
+                    <!-- Evening Transport -->
+                    <div class="form-group attending-fields" style="display: none;">
+                        <label for="transport">Budete potřebovat odvoz večer?</label>
+                        <select id="transport" name="transport">
+                            <option value="">Vyberte možnost</option>
+                            <option value="ne">Ne, poradíme si</option>
+                            <option value="ano">Ano, budu potřebovat odvoz</option>
+                        </select>
+                    </div>
+
+                    <!-- Transport Destination -->
+                    <div class="form-group transport-detail" style="display: none;">
+                        <label for="transport-destination">Kam?</label>
+                        <input type="text" id="transport-destination" name="transport-destination" placeholder="Vaše destinace">
                     </div>
 
                     <!-- Favorite Song -->
@@ -187,7 +220,7 @@
                     <!-- Message -->
                     <div class="form-group">
                         <label for="message">Vzkaz pro novomanžele</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Vaše přání, vzpomínky, informace zda přivedete děti, alergie nebo cokoli dalšího"></textarea>
+                        <textarea id="message" name="message" rows="4" placeholder="Vaše přání, vzkaz nebo cokoli, co nám chcete říct..."></textarea>
                     </div>
 
                     <button type="submit" class="submit-btn">Odeslat potvrzení</button>
@@ -203,7 +236,7 @@
                     <div class="faq-item">
                         <h3 class="faq-question">Kde se bude svatba konat?</h3>
                         <div class="faq-answer">
-                            <p>Obřad proběhne v 12:15 na Zámku Milotice (Zámecká 1, 696 05 Milotice u Kyjova). Následně od 14:30 budeme pokračovat oslavou v Kulturním domě Svatobořice-Mistřín (Hlavní 1080, Svatobořice-Mistřín).</p>
+                            <p>Obřad proběhne v 12:15 na Zámku Milotice (Zámecká 1, 696 05 Milotice u Kyjova). Následně od 14:00 budeme pokračovat oslavou v Kulturním domě Svatobořice-Mistřín (Hlavní 1080, Svatobořice-Mistřín).</p>
                         </div>
                     </div>
                     <div class="faq-item">
