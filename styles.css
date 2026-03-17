@@ -104,26 +104,26 @@ nav a:hover {
     font-size: 4rem;
     color: var(--secondary-color);
     margin-bottom: 1rem;
-    font-weight: 400;
+    font-weight: 700;
 }
 
 .hero-subtitle {
-    font-size: 1.2rem;
-    color: var(--text-light);
+    font-size: 1.1rem;
+    color: var(--text-dark);
     margin-bottom: 2rem;
-    font-style: italic;
 }
 
 .hero-date {
     font-size: 1.5rem;
-    color: var(--main-color);
-    font-weight: 500;
+    color: var(--secondary-color);
+    font-weight: 400;
+    font-family: 'Playfair Display', serif;
     margin-bottom: 0.5rem;
 }
 
 .hero-location {
     font-size: 1.1rem;
-    color: var(--text-light);
+    color: var(--text-dark);
 }
 
 .hero-image {
@@ -191,7 +191,7 @@ section {
 
 .detail-card p {
     margin-bottom: 0.5rem;
-    color: var(--text-light);
+    color: var(--text-dark);
 }
 
 .detail-card strong {
@@ -242,7 +242,7 @@ section {
 
 .gallery-item {
     background-color: var(--light-pink);
-    padding: 1rem;
+    padding: 0.3rem;
     border-radius: 15px;
     text-align: center;
     box-shadow: 0 5px 15px rgba(139, 90, 135, 0.1);
