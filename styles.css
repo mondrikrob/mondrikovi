@@ -337,6 +337,31 @@ section {
     background-color: var(--secondary-color);
 }
 
+/* Lunch portion selector */
+.lunch-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.lunch-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.lunch-name {
+    flex: 1;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+}
+
+.lunch-count {
+    width: 70px;
+    flex-shrink: 0;
+}
+
 /* FAQ Section - DEEP PURPLE */
 .faq {
     background-color: #F0E6EF;
