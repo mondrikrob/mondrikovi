@@ -168,12 +168,29 @@
 
                     <!-- Lunch -->
                     <div class="form-group attending-fields" style="display: none;">
-                        <label for="lunch">Oběd</label>
-                        <select id="lunch" name="lunch">
-                            <option value="">Vyberte možnost</option>
-                            <option value="svickova">Svíčková na smetaně s knedlíkem</option>
-                            <option value="panenka">Vepřová panenka s pepřovou omáčkou a hranolkami (bez lepku)</option>
-                        </select>
+                        <label>Oběd — počet porcí</label>
+                        <div class="lunch-options">
+                            <div class="lunch-row">
+                                <span class="lunch-name">Svíčková na smetaně s knedlíkem</span>
+                                <select name="lunch-svickova" class="lunch-count">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </div>
+                            <div class="lunch-row">
+                                <span class="lunch-name">Vepřová panenka s pepřovou omáčkou a hranolkami (bez lepku)</span>
+                                <select name="lunch-panenka" class="lunch-count">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Evening Transport -->

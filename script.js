@@ -63,13 +63,44 @@ document.getElementById('attendance').addEventListener('change', function() {
         attendingFields.forEach(field => field.style.display = 'block');
     }
     // If 'not-attending', only basic message field remains visible
+    updateLunchMax();
 });
 
 // Show/hide children detail fields
 document.getElementById('children').addEventListener('change', function() {
     const show = this.value === 'ano';
     document.querySelectorAll('.children-detail').forEach(f => f.style.display = show ? 'block' : 'none');
+    if (!show) {
+        document.getElementById('children-count').value = '';
+        updateLunchMax();
+    }
 });
+
+// Update lunch portion max based on total guest count
+function updateLunchMax() {
+    const attendance = document.getElementById('attendance').value;
+    let adults = 0;
+    if (attendance === '1-person') adults = 1;
+    else if (attendance === '2-people') adults = 2;
+
+    const childrenCount = parseInt(document.getElementById('children-count').value) || 0;
+    const total = adults + childrenCount;
+
+    document.querySelectorAll('.lunch-count').forEach(select => {
+        const current = parseInt(select.value) || 0;
+        select.innerHTML = '';
+        for (let i = 0; i <= total; i++) {
+            const opt = document.createElement('option');
+            opt.value = i;
+            opt.textContent = i;
+            if (i === current && i <= total) opt.selected = true;
+            select.appendChild(opt);
+        }
+    });
+}
+
+// Update lunch max when children count changes
+document.getElementById('children-count').addEventListener('input', updateLunchMax);
 
 // Show/hide transport destination
 document.getElementById('transport').addEventListener('change', function() {
