@@ -341,25 +341,22 @@ section {
 .lunch-options {
     display: flex;
     flex-direction: column;
-    gap: 0.6rem;
+    gap: 1rem;
 }
 
 .lunch-row {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 0.3rem;
 }
 
 .lunch-name {
-    flex: 1;
     font-size: 0.95rem;
     color: var(--text-dark);
 }
 
 .lunch-count {
-    width: 70px;
-    flex-shrink: 0;
+    width: 120px;
 }
 
 /* FAQ Section - DEEP PURPLE */
