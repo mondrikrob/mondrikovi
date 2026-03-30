@@ -359,6 +359,25 @@ section {
     width: 120px;
 }
 
+/* Dress code color palette */
+.color-palette {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.color-dot {
+    display: block;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    border-radius: 50%;
+    border: 2px solid rgba(0,0,0,0.08);
+    flex-shrink: 0;
+}
+
 /* FAQ Section - DEEP PURPLE */
 .faq {
     background-color: #F0E6EF;
